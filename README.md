@@ -2,7 +2,7 @@
 
 Student Number: C21416022 (Bakht Zia Khan), C21716601 (Emil Roy), C21388736 (Nicolas Ruth)
 
-At first used a different repository to complete this project because of a forking issue among the group. I commited all the code to this repository when we completed the assignment. This is the link to that repository:
+At first we used a different repository to complete this project because of a forking issue among the group. I commited all the code to this repository when we completed the assignment. This is the link to that repository:
 https://github.com/emilroy4/MV-C21716601 
 
 # Description of the assignment
