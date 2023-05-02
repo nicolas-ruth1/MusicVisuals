@@ -13,7 +13,98 @@ Press Space to start the Visual and press the numbers 1 to 5 to change visuals.
 
 
 # How it works
-We use the 
+The Main.java file is the main file that runs everything on the program. When you press F5 to run the code, main calls on rockstar.java. The file rockstar.java calls on all the visuals, and allows the user to flick through them using the keys 1-5. The way this works is that the other classes use inheritance to call on the super/parent class. To do this the word extends is used. 
+
+In the setup method, objects are created in rockstar.java.
+
+```Java
+public void setup()
+    {
+        startMinim();
+
+        loadAudio("immortal.mp3");
+
+        er = new emil(this);
+        er1 = new emil1(this);
+        bakht = new bakht(this);
+        nico = new nico(this);
+        us = new us(this);
+        us1 = new us1(this);
+        visual6 = new visual6(this);
+
+
+        colorMode(RGB);
+    }
+```
+
+In the draw method, the variable and the method used to created the visuals are called and to this we used a switch statement:
+
+```Java
+public void draw()
+    {
+        background(0);
+        try
+        {
+            // Call this if you want to use FFT data
+            calculateFFT(); 
+        }
+        catch(VisualException e)
+        {
+            e.printStackTrace();
+        } 
+        // Call this is you want to use frequency bands
+        calculateFrequencyBands(); 
+
+        // Call this is you want to get the average amplitude
+        calculateAverageAmplitude();
+
+        switch(v)
+        {
+            case 1:
+            {
+                bakht.render();
+                break;
+            }
+
+            case 2:
+            {
+
+                er.render();
+                er1.render();
+
+                break;
+            }
+
+            case 3:
+            {
+                
+                nico.render();
+                break;
+            }
+
+            case 4:
+            {
+
+                visual6.render();
+
+                break;
+            }
+
+            case 5:
+            {
+
+                us1.render();
+                us.render();
+
+                break;
+            }
+
+
+        }
+    }
+```
+
+Pressing from 1 to 5 will display one of the visuals we created. When you press to move onto the next key, you should see a new shape that also interacts with the song. These visuals range from spinning hoops to a colourful cube.
 
 # What we are most proud of in the assignment
 We are proud in our team's accomplishment of completing this music visual project. At the start of the project, we thoroughly analyzed the assignment brief, dissecting it into manageable tasks that we could individually work on. Our team collaborated proficiently, regularly discussing our progress, brainstorming ideas, and offering constructive feedback to one another. Diligently utilizing our technical skills in Processing, Minim, and Github, we created an audio-responsive program that effectively conveyed our chosen song's mood, tempo, and structure. We experimented with various visual elements, refined our code, and iterated on our design until we produced five visually stimulating and abstract representation of the song, showcasing our creativity and storytelling capabilities. This project allowed us to sharpen our teamwork, creativity, and technical skills, and we are proud of the program we produced as a team.
@@ -21,8 +112,53 @@ We are proud in our team's accomplishment of completing this music visual projec
 
 # Code
 
+This is the code we used to switch between the visuals. We decided to use a switch statement as we believe it is efficient and simple to code.
+
+```Java
+  switch(v)
+        {
+            case 1:
+            {
+                bakht.render();
+                break;
+            }
+
+            case 2:
+            {
+
+                er.render();
+                er1.render();
+
+                break;
+            }
+
+            case 3:
+            {
+                
+                nico.render();
+                break;
+            }
+
+            case 4:
+            {
+            
+                visual6.render();
+
+                break;
+            }
+
+            case 5:
+            {
+
+                us1.render();
+                us.render();
+
+                break;
+            }
 
 
+        }
+```
 
 
 This is the code to render case 1:
