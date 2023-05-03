@@ -22,6 +22,7 @@ public class visual6 {
     float width = 800f;
     float height = 800f;
 
+    // render
     public void render() {
 
         rs.background(0);
