@@ -13,12 +13,6 @@ public class visual6 {
     private int lastHoopTime = 0;
     private int hoopInterval = 1000; // 1 second interval
     private int currentHoop = 0;
-    // private boolean[] shootingStarActive = new boolean[15];
-    // private float[] shootingStarX = new float[15];
-    // private float[] shootingStarY = new float[15];
-    // private float[] shootingStarLength = new float[15];
-    // private float[] shootingStarFade = new float[15];
-    // private float[] shootingStarAngle = new float[15]; 
     float[] starSizes = new float[30];
     float[] starOpacities = new float[30];
     float[] starFades = new float[30];
@@ -101,60 +95,6 @@ public class visual6 {
         }
         rs.popMatrix();
 
-        // rs.pushMatrix();
-        // // Add shooting stars effect
-        // for (int i = 0; i < starSizes.length; i++) {
-        // if (!starActive[i]) {
-        // // Generate a new star
-        // starSizes[i] = rs.random(5, 15);
-        // starOpacities[i] = 0;
-        // starFades[i] = rs.random(100, 255);
-        // starActive[i] = true;
-        // }
-
-        // // Update the star's opacity
-        // float amplitude1 = rs.getSmoothedAmplitude();
-        // float colorVal1 = rs.map(amplitude1, 0, 1, 0, 255);
-        // starOpacities[i] = PApplet.lerp(starOpacities[i], colorVal1, 0.2f); //
-        // Interpolate between the current
-        // // opacity and the new opacity based on
-        // // the audio amplitude
-
-        // // Draw the star
-        // rs.noStroke();
-        // rs.fill(255, 255, 255, starOpacities[i]);
-        // rs.ellipse(rs.random(0, rs.width), rs.random(0, rs.height), starSizes[i],
-        // starSizes[i]);
-
-        // // Fade out the star
-        // if (starOpacities[i] >= starFades[i]) {
-        // starOpacities[i] = starFades[i];
-        // starActive[i] = false;
-        // }
-        // }
-
-        // // Draw the shooting stars
-        // rs.strokeWeight(10);
-        // for (int j = 0; j < shootingStarActive.length; j++) {
-        // if (shootingStarActive[j]) {
-        // for (int i = 0; i < shootingStarLength[j]; i++) {
-        // float fade = rs.map(i, 0, shootingStarLength[j], 255, 0);
-        // rs.stroke(255, 255, 255, fade);
-        // float x = shootingStarX[j] + i * PApplet.cos(shootingStarAngle[j]);
-        // float y = shootingStarY[j] + i * PApplet.sin(shootingStarAngle[j]);
-        // rs.line(x, y, x - PApplet.cos(shootingStarAngle[j] - PApplet.PI / 2),
-        // y - PApplet.sin(shootingStarAngle[j] - PApplet.PI / 2));
-        // }
-
-        // // Fade out the shooting star
-        // shootingStarFade[j] = 255 - (amplitude * 255);
-
-        // if (shootingStarFade[j] <= 0) {
-        // // Reset the shooting star
-        // shootingStarActive[j] = false;
-        // }
-        // }
-        // }
-        // rs.popMatrix();
+       
     }
 }

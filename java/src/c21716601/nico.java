@@ -20,13 +20,13 @@ public class nico {
 
         float interval = 2000; // alternate colors every 2 seconds
         float currentTime = nico.millis();
-        
+
         if (currentTime % interval < interval / 2) {
             nico.fill(102, 0, 102); // set the fill color to dark purple
             nico.stroke(137, 207, 240); // set stroke baby blue
         } else {
-          nico.fill(137, 207, 240); // set the fill color to baby blue
-          nico.stroke(102, 0, 102); // set stroke dark purple
+            nico.fill(137, 207, 240); // set the fill color to baby blue
+            nico.stroke(102, 0, 102); // set stroke dark purple
         }
 
         nico.strokeWeight(5); // set the stroke thickness to 5 pixels
@@ -36,14 +36,14 @@ public class nico {
         nico.rotateX(angle); // rotate the cube around the y-axis
         nico.box(40); // draw the cube
         nico.popMatrix(); // restore the previous transformation
-        
+
         nico.pushMatrix(); // save the current transformation
         nico.camera(0, -100, 200, 0, 0, 0, 5, 0, 0);
         nico.translate(90, 0, 0); // move the cube to the right
         nico.rotateX(angle); // rotate the cube around the x-axis
         nico.box(40); // draw the cube
         nico.popMatrix(); // restore the previous transformation
-        
+
         // SPHERE
 
         nico.camera(0, -100, 200, 0, 0, 0, 5, 0, 0);
