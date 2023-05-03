@@ -13,10 +13,6 @@ public class visual6 {
     private int lastHoopTime = 0;
     private int hoopInterval = 1000; // 1 second interval
     private int currentHoop = 0;
-    float[] starSizes = new float[30];
-    float[] starOpacities = new float[30];
-    float[] starFades = new float[30];
-    boolean[] starActive = new boolean[30];
 
     public visual6(rockstar rs) {
         this.rs = rs;
